@@ -40,7 +40,7 @@ export function Hero() {
     name: "이유원",
     title: "단국대 학생입니다",
     description: "프롭테크 기술로 부동산 시장을 분석합니다.",
-    profileImage: "/uploads/hero-profile-1761477237286.png",
+    profileImage: "/uploads/hero-profile-1762225182825.png",
     backgroundImage: "",
     backgroundVideo: "",
     backgroundOpacity: 0.1,
