@@ -18,7 +18,7 @@ export function Projects() {
     initialDisplay: 6,
     loadMoreCount: 3,
     background: {"image":"","video":"","color":"#c7ad75","opacity":0.3},
-    projects: [] as Array<{ image: string; video?: string; title: string; description: string }>
+    projects: [{"image":"/uploads/project-1765104040822-1765104041117.png","video":"","title":"부동산금융수업-부동산 가격 결정요인 분석","description":"서울시 내 500건의 가상 실거래 데이터를 활용하여 주택 가격에 영향을 미치는 요인들\n을 실증적으로 분석"}] as Array<{ image: string; video?: string; title: string; description: string }>
   }
 
   const [projectsInfo, setProjectsInfo] = useState(defaultInfo)
