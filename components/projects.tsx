@@ -14,11 +14,11 @@ export function Projects() {
   // 기본 데이터
   const defaultInfo = {
     title: "프로젝트",
-    subtitle: "프로젝트",
+    subtitle: "https://drive.google.com/drive/folders/1ngUU4Wd6l50wIzIScqmKV50YtCxcapHz?usp=drive_link",
     initialDisplay: 6,
     loadMoreCount: 3,
     background: {"image":"","video":"","color":"#c7ad75","opacity":0.3},
-    projects: [{"image":"/uploads/project-1765104040822-1765104041117.png","video":"","title":"부동산금융수업-부동산 가격 결정요인 분석","description":"서울시 내 500건의 가상 실거래 데이터를 활용하여 주택 가격에 영향을 미치는 요인들\n을 실증적으로 분석"}] as Array<{ image: string; video?: string; title: string; description: string }>
+    projects: [{"image":"/uploads/project-1765104040822-1765104041117.png","video":"","title":"부동산금융수업-부동산 가격 결정요인 분석","description":"서울시 내 500건의 가상 실거래 데이터를 활용하여 주택 가격에 영향을 미치는 요인들\n을 실증적으로 분석"},{"image":"/uploads/project-1-1765105898676.png","video":"","title":"부동산금융수업-최적 포트폴리오 구성 분석 및 금리사이클에 따른 리츠 성과 연구","description":"리츠 투자와 S&P500의 위험 대비 수익률 특성 비교 및 최적의 투자 비중 도출.\n장기 수익성과 시장 위기 대응력 검증"},{"image":"/uploads/project-1765106737363-1765106737565.png","video":"","title":"교통계획수업-동백동 생활권의 교통자립성 강화를 위한 수요응답형교통(DRT) 도입 – GTX 구성역 연계를 중심으로 -","description":"GTX 구성역 개통 효과를 극대화하고 동백동 주민의 교통 불편을 해소하기 위해, 기존 대중교통의 한계를 보완할 수 있는DRT를 동백동에 도입하고 GTX 연계 중심으로 운영하는 구체적인 전략 및 정책 제언을 제시"},{"image":"/uploads/project-1765106752525-1765106752748.png","video":"","title":"스마트도시론-성남시 교통 취약지역 DRT 도입방안","description":"성남시에서 교통이 취약한 지역을 선정하고 그 해결책으로 DRT 도입방안을 제시. od분석을 통해 실제 동선을 파악하고 현재 운영 중인 버스 노선과 연관지어 수요대비 공급이 미흡한 곳에 DRT를 도입하고자 함"}] as Array<{ image: string; video?: string; title: string; description: string }>
   }
 
   const [projectsInfo, setProjectsInfo] = useState(defaultInfo)
