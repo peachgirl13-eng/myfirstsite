@@ -52,7 +52,7 @@ export function Contact() {
     bottomSubMessage: "데이터 분석과 실무 경험을 바탕으로, 공공 행정의 신뢰도를 높이는 전문가가 되겠습니다.",
     qrContent: ["name","phone","email","location","website"],
     profileEmoji: "👤",
-    background: {"image":"","video":"","color":"#fff8e0","opacity":0.4}
+    background: {"image":"","video":"","color":"#fff8df","opacity":0.4}
   }
   
   // 소셜 링크 기본값 (배열 형태로 변경)
