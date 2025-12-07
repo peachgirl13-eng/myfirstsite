@@ -360,7 +360,7 @@ export function Projects() {
         </section>
       </EditableBackground>
 
-      {/* 이미지 / 비디오 확대 모달 */}
+{/* 이미지 / 비디오 확대 모달 */}
 {selectedImage && (
   <div
     className="fixed inset-0 z-[100] bg-black/70 flex items-center justify-center p-4"
@@ -387,18 +387,19 @@ export function Projects() {
             className="max-h-[75vh] rounded-lg"
           />
         ) : (
-          /* 이미지일 경우 */
-          <img
-            src={selectedImage}
-            alt="확대 이미지"
-            className="max-h-[75vh] rounded-lg object-contain"
-          />
+          <>
+            {/* 이미지일 경우 */}
+            <img
+              src={selectedImage}
+              alt="확대 이미지"
+              className="max-h-[75vh] rounded-lg object-contain"
+            />
+          </>
         )}
       </div>
     </div>
   </div>
-)}
-      
+)}  
       {/* 프로젝트 추가 모달 */}
       {showProjectModal && isEditMode && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-[9999]">
