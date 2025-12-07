@@ -39,13 +39,13 @@ export function Hero() {
     greeting: "안녕하세요,",
     name: "이유원",
     title: "단국대 학생입니다",
-    description: "전문 행정 역량을 갖춘 논리 엔진",
+    description: "객관적 데이터 분석 능력을 활용하여 더 살기 좋은 도시를 설계하는 미래 도시 행정 전문가",
     profileImage: "/uploads/hero-profile-1765096343259.png",
     backgroundImage: "",
     backgroundVideo: "",
     backgroundOpacity: 0.1,
     projectButton: "프로젝트 보기",
-    background: {"image":"/uploads/hero-background-1765107395792.png","video":"","color":"","opacity":1}
+    background: {"image":"/uploads/hero-background-1765108156200.jpg","video":"","color":"","opacity":1}
   }
 
   const [backgroundData, setBackgroundData] = useState<{ image: string; video: string; color: string; opacity: number } | null>(null)
