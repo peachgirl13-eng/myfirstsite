@@ -360,58 +360,44 @@ export function Projects() {
         </section>
       </EditableBackground>
 
-      {/* 이미지 확대 모달 (생략되지 않음) */}
-      {selectedImage && (
-        <div 
-          className="fixed inset-0 z-[100] bg-black/70 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
-        >
-          {/* 모달 컨테이너 */}
-          <div 
-            className="relative bg-background rounded-lg shadow-2xl max-w-4xl max-h-[85vh] w-full overflow-hidden"
-            onClick={(e) => e.stopPropagation()}
-          >
-            {/* 닫기 버튼 */}
-            <button
-              onClick={() => setSelectedImage(null)}
-              className="absolute top-3 right-3 z-10 p-2 rounded-full bg-background/80 hover:bg-background shadow-lg transition-all hover:scale-110"
-              aria-label="닫기"
-            >
-              <X className="w-5 h-5 text-foreground" />
-            </button>
+      {/* 이미지 / 비디오 확대 모달 */}
+{selectedImage && (
+  <div
+    className="fixed inset-0 z-[100] bg-black/70 flex items-center justify-center p-4"
+    onClick={() => setSelectedImage(null)}
+  >
+    <div
+      className="relative bg-background rounded-lg shadow-2xl max-w-4xl max-h-[85vh] w-full overflow-hidden"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <button
+        onClick={() => setSelectedImage(null)}
+        className="absolute top-3 right-3 z-10 p-2 rounded-full bg-background/80 hover:bg-background shadow-lg transition-all hover:scale-110"
+        aria-label="닫기"
+      >
+        <X className="w-5 h-5 text-foreground" />
+      </button>
 
-            {/* 확대된 이미지/비디오 */}
-            <div className="relative w-full h-full flex items-center justify-center p-4">
-              {selectedImage && (selectedImage.includes('.mp4') || selectedImage.includes('.webm') || selectedImage.includes('youtube')) ? (
-                <video
-                  src={selectedImage}
-                  className="max-w-full max-h-[75vh] object-contain rounded"
-                  controls
-                  autoPlay
-                  loop
-                />
-              ) : (
-                <img
-                  src={selectedImage}
-                  alt="확대된 프로젝트 이미지"
-                  className="max-w-full max-h-[75vh] object-contain rounded"
-                  onError={(e) => {
-                    const target = e.currentTarget
-                    target.style.display = 'none'
-                    const parent = target.parentElement
-                    if (parent) {
-                      const placeholder = document.createElement('div')
-                      placeholder.className = 'text-muted-foreground text-center py-20'
-                      placeholder.innerHTML = '<span class="text-6xl">📁</span><p class="mt-4">미디어를 불러올 수 없습니다</p>'
-                      parent.appendChild(placeholder)
-                    }
-                  }}
-                />
-              )}
-            </div>
-          </div>
-        </div>
-      )}
+      <div className="relative w-full h-full flex items-center justify-center p-4">
+        {/* 비디오일 경우 */}
+        {selectedImage.includes(".mp4") || selectedImage.includes(".webm") ? (
+          <video
+            src={selectedImage}
+            controls
+            className="max-h-[75vh] rounded-lg"
+          />
+        ) : (
+          /* 이미지일 경우 */
+          <img
+            src={selectedImage}
+            alt="확대 이미지"
+            className="max-h-[75vh] rounded-lg object-contain"
+          />
+        )}
+      </div>
+    </div>
+  </div>
+)}
       
       {/* 프로젝트 추가 모달 */}
       {showProjectModal && isEditMode && (
